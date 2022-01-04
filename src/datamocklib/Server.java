@@ -1,13 +1,19 @@
 package datamocklib;
+import java.util.List;
+
+import static datamocklib.TxtHelper.getDataFromTxt;
+import static datamocklib.TxtHelper.insertDataInTxt;
 
 public class Server {
+    private final String SERVER = "server.txt";
 
-    public int sendServer(String data){
-        // Put data in json
-        return 200;
+    public int sendDataToServer(String data){
+        return insertDataInTxt(data, SERVER);
     }
 
-    public String getDataServeur() {
-        return "list person";
+    public List<String> getDataFromServer() {
+        return getDataFromTxt(SERVER);
     }
+
+
 }
