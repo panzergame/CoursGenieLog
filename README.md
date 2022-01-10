@@ -8,6 +8,7 @@ Dès que vous avez terminé un exercice, veuillez Push immédiatemment afin que 
 Vous aurez aussi besoin d'un environnement Java fonctionnel.
 
 > Si votre fork n'est pas à jour par rapport au main (si vous l'avez fork hier soir), vous pouvez le mettre à jour de cette manière :
+> https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork
 
 ---
 
