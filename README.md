@@ -76,9 +76,19 @@ Faites 3 points d’entrées d’une application pour :
   - Récupérer la liste des personnes habitant Chambéry.
   - Récupérer la liste des personnes de plus de 25 ans.
   - Récupérer la liste des personnes habitant leur ville de naissance.
+  - Récupérer la liste des femmes de plus de 25 ans.
 
 
-Il vous faut compléter les fichiers _BusinessImpl.java_, _LocalDataSourceImpl.java_, _RepositoryImpl.java_ et _ServerDataSourceImpl.java_.
+Voir les consignes dans le fichier MainExercice2.java.
+
+Pour implémenter ces points d’entrées :
+  - Pour récuperer les données sur le serveur, on utilise _TxtHelper.getDataFromTxt("server.txt")_
+  - Vider la base de données locale grâce à la fonction _TxtHelper.clearDataLocal();_
+  - Insérer les données dans la database locale _TxtHelper.insertDataInTxt(String data, String file)_
+  - Afficher les données locale grâce à _TxtHelper.getDataFromTxt(data, "local.txt")_;
+
+> Ces functions imitent une connexion à une base de données et simulent une persistance des données en local.
+
 
 ---
 
