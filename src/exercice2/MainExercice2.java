@@ -47,6 +47,7 @@ public class MainExercice2 implements Exo2 {
     }
 
     public static void main(String[] args) {
-
+        Exo2 exo2 = new MainExercice2();
+        exo2.displayBoomers();
     }
 }
