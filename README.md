@@ -52,7 +52,7 @@ _MainExercice1.java_ :
 ```java
 // Format du fichier : firstName,lastName,birthDate,gender,cityOfResidence,cityOfBirth
 // Pas de header
-public static ArrayList<Person> parse(ArrayList<String> data)
+public static List<Person> parse(List<String> data){}
 ```
 
 _Person.java_ :
@@ -68,11 +68,17 @@ public class Person {
 }
 ```
 
-
 ---
 
 ### Exercice 2
-[énoncé de l'éxo]
+Vous disposez d’une API pour récupérer des données depuis un serveur.
+Faites 3 points d’entrées d’une application pour :
+  - Récupérer la liste des personnes habitant Chambéry.
+  - Récupérer la liste des personnes de plus de 25 ans.
+  - Récupérer la liste des personnes habitant leur ville de naissance.
+
+
+Il vous faut compléter les fichiers _BusinessImpl.java_, _LocalDataSourceImpl.java_, _RepositoryImpl.java_ et _ServerDataSourceImpl.java_.
 
 ---
 
