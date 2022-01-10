@@ -4,18 +4,17 @@ import exercice2.models.*;
 
 public class MainExercice2 implements Exo2 {
 
-    // EXO 2
-    /*
+    /* EXO 2
      * Recupérez depuis le serveur la liste des gens qui sont nés à Chambéry.
      * La récupération de Data se fait dans l'ordre :
-     *  - Récupération de data sur le server grace à TxtHelper.getDataFromTxt("server.txt");
-     *  - Vider la base de données locale grace a fonction TxtHelper.clearDataLocal();
-     *  - Insérer les données dans la database locale
-     *  - Afficher les données locale grace à TxtHelper.getDataFromTxt(data, "local.txt")
+     *  - Récupération de data sur le server grâce à TxtHelper.getDataFromTxt("server.txt");
+     *  - Vider la base de données locale grâce à la fonction TxtHelper.clearDataLocal();
+     *  - Insérer les données dans la database locale grâce à la fonction TxtHelper.insertDataInTxt(line, "local.txt")
+     *  - Afficher les données locale grace à TxtHelper.getDataFromTxt("local.txt")
      */
     @Override
     public void displayPersonFromChambery() {
-
+        System.out.println("todo");
     }
 
     /*
