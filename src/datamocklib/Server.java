@@ -7,7 +7,7 @@ import static datamocklib.TxtHelper.insertDataInTxt;
 public class Server {
     private final String SERVER = "server.txt";
 
-    public int sendDataToServer(String data){
+    public int sendDataToServer(String data) {
         return insertDataInTxt(data, SERVER);
     }
 

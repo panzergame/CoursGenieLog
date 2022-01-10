@@ -1,6 +1,9 @@
 import datamocklib.Server;
 
-import java.util.List;
+import java.util.*;
+
+import datamocklib.exo1.Person;
+import datamocklib.exo1.PersonParser;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,8 +12,15 @@ public class Main {
         int result = server.sendDataToServer("Kristan Kelapierre");
         List<String> resultString = server.getDataFromServer();
 
-        System.out.println(resultStringBefore);
-        System.out.println(result);
-        System.out.println(resultString);
+
+
+        // EXO 1
+
+        /*
+         * Parser la liste des Personnes (fonction parse() dans PersonParser)
+         * Calculer la population totale par ville avec les données obtenues.
+         * (Les données contiennent une trentaine de villes)
+        */ 
+
     }
 }

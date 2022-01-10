@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TxtHelper {
+    
     public static List<String> getDataFromTxt(String file) {
         List<String> data = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
