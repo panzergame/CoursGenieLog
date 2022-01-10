@@ -5,7 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TxtHelper {
+
     /**
+     * retrieve data from a txt file
+     * @param file the name of the file containing the data
+     * @return a list of strings, one string being a line of the text file.
+     */
     public static List<String> getDataFromTxt(String file) {
         List<String> data = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {

@@ -9,7 +9,7 @@ public class PersonParser {
     public static ArrayList<Person> parse(ArrayList<String> data) {
 
         // A COMPLETER
-
+        return new ArrayList<Person>();
     }  
     
 }
