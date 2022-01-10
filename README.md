@@ -14,19 +14,60 @@ Vous aurez aussi besoin d'un environnement Java fonctionnel.
 
 ## Organisation
 
-Nous allons réaliser avec vous __2 exercices__, le premier se concentrera sur _les bonnes pratiques_ de programmation en règle générale, tandis que le deuxième vous testera sur _l'architecture multicouches_.
+Nous allons réaliser avec vous __2 exercices__, le premier se concentrera sur _les bonnes pratiques_ de programmation en règle générale, tandis que le deuxième vous testera sur _la clean architecture_.
 
 Afin de vous aider dans la réalisation de cette exercice, nous vous fournissons une __librairie__.
 Celle-ci est directement dans le projet, en voici la documentation.
 
-[Insérer screenshot avec le dossier montrant la lib]
 
-[Insérer documentation des fonctions]
+![docFile](https://user-images.githubusercontent.com/36131543/148832398-83a73546-a5a5-4453-a20a-d6f57b843f87.jpg)
+
+### Documentation de la librairie fournie :
+
+_src/datamocklib/TxtHelper.java_ :
+```java
+/**
+* retrieve data from a txt file
+* @param file the name of the file containing the data
+* @return a list of strings, one string being a line of the text file.
+*/
+List<String> getDataFromTxt(String file);
+
+/**
+* Insert a line of data at the end of a txt file
+* @param data the line of data you want to add in the file
+* @param file the file you want to store the data in
+* @return 200 if the operation succeed, 400 if it fails
+*/
+int insertDataInTxt(String data, String file);
+```
+
 
 ---
 
 ### Exercice 1
-[énoncé de l'exo]
+Vous disposez d'une liste de personnes sous la forme du fichier _persons.txt_. Vous devez compléter la fonction PersonParser() dans _MainExercice1.java_ pour convertir les informations en objets _Personne_.
+
+_MainExercice1.java_ :
+```java
+// Format du fichier : firstName,lastName,birthDate,gender,cityOfResidence,cityOfBirth
+// Pas de header
+public static ArrayList<Person> parse(ArrayList<String> data)
+```
+
+_Person.java_ :
+```java
+public class Person {
+    private String firstName;
+    private String lastName;
+    private String birthDate;
+    private String gender;
+    private String cityOfResidence;
+    private String cityOfBirth;
+[...]
+}
+```
+
 
 ---
 
