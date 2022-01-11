@@ -1,8 +1,21 @@
 package exercice2;
 
+import datamocklib.Person;
+import datamocklib.TxtHelper;
 import exercice2.models.*;
 
+import java.io.FileNotFoundException;
+import java.util.List;
+
 public class MainExercice2 implements Exo2 {
+    PersonModel model;
+    public MainExercice2() {
+        this.model = new PersonModel();
+    }
+
+    public void displayPersons(List<Person> persons) {
+        persons.forEach(person -> System.out.println(person));
+    }
 
     /* EXO 2
      * Recupérez depuis le serveur la liste des gens qui sont nés à Chambéry.
@@ -14,7 +27,7 @@ public class MainExercice2 implements Exo2 {
      */
     @Override
     public void displayPersonFromChambery() {
-        System.out.println("todo");
+        this.displayPersons(this.model.getPersonFromChambery());
     }
 
     /*
@@ -24,7 +37,7 @@ public class MainExercice2 implements Exo2 {
      */
     @Override
     public void displayBoomers() {
-
+        this.displayPersons(this.model.getBoomers());
     }
 
     /*
@@ -33,7 +46,7 @@ public class MainExercice2 implements Exo2 {
      */
     @Override
     public void displayFemales() {
-
+        this.displayPersons(this.model.getFemales());
     }
 
     /*
@@ -42,7 +55,7 @@ public class MainExercice2 implements Exo2 {
      */
     @Override
     public void displayFemaleBoomers() {
-
+        this.displayPersons(this.model.getFemaleBoomers());
     }
 
     public static void main(String[] args) {
