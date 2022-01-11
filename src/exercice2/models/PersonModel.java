@@ -8,35 +8,21 @@ import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PersonModel {public static final String SERVER_FILE = "server.txt";
-    public static final String LOCAL_FILE = "local.txt";
-    private List<Person> persons;
+public class PersonModel {
+    public static final String SERVER_FILE = "server.txt";
 
-    public PersonModel() {
-        loadPersonsFromServer();
-        List<String> localData = TxtHelper.getDataFromTxt(LOCAL_FILE);
+
+    public List<Person> loadPersonsFromServer() {
         PersonParser parser = new PersonParser();
-        this.persons = parser.parse(localData);
-    }
-
-    public void loadPersonsFromServer() {
-        List<String> serverData = TxtHelper.getDataFromTxt(SERVER_FILE);
-        try {
-            TxtHelper.clearDataLocal();
-            for (String data : serverData) {
-                TxtHelper.insertDataInTxt(data, LOCAL_FILE);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        return parser.parse(TxtHelper.getDataFromTxt(SERVER_FILE));
     }
 
     public List<Person> getPersonFromChambery() {
-        return this.persons.stream().filter(person -> person.getCityOfBirth().equals("Chambery")).collect(Collectors.toList());
+        return this.loadPersonsFromServer().stream().filter(person -> person.getCityOfBirth().equals("Chambery")).collect(Collectors.toList());
     }
 
     public List<Person> getBoomers() {
-        return this.getBoomers(this.persons);
+        return this.getBoomers(this.loadPersonsFromServer());
     }
 
     public List<Person> getBoomers(List<Person> persons) {
@@ -44,7 +30,7 @@ public class PersonModel {public static final String SERVER_FILE = "server.txt";
     }
 
     public List<Person> getFemales() {
-        return this.persons.stream().filter(person -> person.getGender().equals("female")).collect(Collectors.toList());
+        return this.loadPersonsFromServer().stream().filter(person -> person.getGender().equals("female")).collect(Collectors.toList());
     }
 
     public List<Person> getFemaleBoomers() {
